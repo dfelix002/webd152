@@ -1,0 +1,124 @@
+/* Pacific Trails Resort CSS - Chapter 10 Final
+   Author: Diego Felix
+*/
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #90c7e3;
+    background-image: linear-gradient(to bottom, #ffffff, #90c7e3);
+    border: 1px solid #000033;
+    box-shadow: 3px 3px 3px #333333;
+    color: #555555;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    margin: auto;
+    max-width: 75rem;
+    width: 80%;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #000032;
+    background-image: url("images/sunset.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header a { text-decoration: none; color: #ffffff; }
+
+nav { font-size: 120%; font-weight: bold; padding: 1.5em; text-align: center; }
+nav ul { display: flex; flex-direction: column; list-style-type: none; margin: 0; padding: 0; }
+nav li { border-bottom: 1px solid #000032; padding: 0.5rem 0; }
+nav a { text-decoration: none; color: #5c7fa3; }
+
+main { background-color: #ffffff; padding: 1rem 2rem; }
+h1, h2, h3, footer { font-family: Georgia, serif; }
+h2 { color: #1976d2; text-shadow: 1px 1px #cccccc; }
+
+/* Hero Images Configuration */
+#homehero, #yurthero, #trailhero, #reservationshero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 18.75rem;
+    width: 100%;
+}
+
+#homehero { background-image: url("images/coast2.jpg"); }
+#yurthero { background-image: url("images/yurt.jpg"); }
+#trailhero { background-image: url("images/trail.jpg"); }
+
+/* Sa a se imaj ou te di a */
+#reservationshero { background-image: url("images/reservations.jpg"); }
+
+/* Table Styles (Chapter 9) */
+table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
+th, td { border: 1px solid #cccccc; padding: 10px; }
+th { background-color: #f4f4f4; }
+.sr-only { position: absolute; left: -9999px; }
+
+/* Form Styles (Chapter 10) */
+form {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    gap: 1rem;
+    max-width: 35rem;
+    margin-top: 1rem;
+}
+label { text-align: right; font-weight: bold; padding-right: 0.5rem; }
+input, textarea { padding: 5px; width: 100%; }
+#mySubmit {
+    grid-column: 2;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #000032;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer { font-size: 75%; font-style: italic; padding: 2em; text-align: center; }
+
+/* --- Media Queries --- */
+
+@media (max-width: 63rem) {
+    #wrapper { width: 100%; }
+    header { background-image: none; }
+    
+    form { display: flex; flex-direction: column; }
+    label { text-align: left; }
+
+    thead { display: none; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr { border: 1px solid #cccccc; margin-bottom: 1rem; }
+    td {
+        text-align: right;
+        padding-left: 50% !important;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eeeeee;
+        min-height: 2.5rem;
+    }
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #002171;
+    }
+    .description { display: none; }
+}
+
+@media (min-width: 64rem) {
+    nav ul { flex-direction: row; justify-content: center; }
+    nav li { border-bottom: none; padding: 0 1rem; }
+    .card-row { display: flex; gap: 1rem; }
+    .card-row section { flex: 1; border: 1px solid #ccc; padding: 10px; }
+}
