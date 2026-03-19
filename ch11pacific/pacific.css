@@ -1,0 +1,376 @@
+/* --- 1. Style Jeneral (Ki soti nan Chapit 9 ou a) --- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #90c7e3;
+    background-image: linear-gradient(to bottom, #ffffff, #90c7e3);
+    border: 1px solid #000033;
+    box-shadow: 3px 3px 3px #333333;
+    color: #555555;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    margin: auto;
+    max-width: 75rem;
+    width: 80%;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #000032;
+    background-image: url(images/sunset.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* --- 2. Navigasyon --- */
+nav {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 1.5em;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav li {
+    border-bottom: 1px solid #000032;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:link { color: #5c7fa3; }
+nav a:visited { color: #344873; }
+nav a:hover { color: #a52a2a; }
+
+/* --- 3. Seksyon Hero (Koreksyon ID Chapit 10 la) --- */
+#homehero, #yurthero, #trailhero, #reservations-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18.75rem;
+}
+
+#homehero { background-image: url(images/coast2.jpg); }
+#yurthero { background-image: url(images/yurt.jpg); }
+#trailhero { background-image: url(images/trail.jpg); }
+#reservations-hero { background-image: url(images/reservations.jpg); }
+
+/* --- 4. Kontni Prensipal --- */
+main {
+    background-color: #ffffff;
+    padding: 0.0625rem 1.25rem 1.25rem 1.875rem;
+}
+
+h1, h2, h3, footer {
+    font-family: Georgia, "Times New Roman", Times, Baskerville, serif;
+}
+
+h2 {
+    color: #1976d2;
+    text-shadow: 1px 1px #cccccc;
+}
+
+h3 {
+    color: #000033;
+}
+
+/* --- 5. Tablo ak Card (Style Chapit 9 la) --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+table th, table td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+
+table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+* SA SE KOREKSYON W TE MANDE A */
+tr:hover {
+    background-color: #e0ffe0; /* Koulè vèt pal la lè souri a pase sou li */
+}
+
+.card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-row section {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+/* --- 6. PAJ RESERVATIONS (STYLE CHAPIT 10 KI TE MANKE A) --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background-color: #f8fafc;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+form label {
+  color: #003;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+  text-align: left; /* Chanje soti nan grid style pou flex style */
+}
+
+form input, form textarea {
+  padding: 0.5em;
+  border: 1px solid #b0bec5;
+  border-radius: 0.25em;
+  font-size: 1em;
+  background: #fff;
+  transition: border-color 0.2s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #003;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #003;
+  color: #fff;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.75em 2em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #005;
+}
+
+/* --- 7. Klas Utilitè .center (Pwofesè a mande sa) --- */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+    background-color: #ffffff;
+    font-size: 75%;
+    font-style: italic;
+    padding: 2em;
+    text-align: center;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.content-row video {
+    max-width: 100%;
+    flex: 0 0 320px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 2em;
+}
+.text-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Agrandi container a yon ti kras */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Lonbraj pi fon */
+    
+    /* TASK: Chanje koulè background lan lè w hover */
+    background-color: #3399ff; 
+}
+
+.gallery-image:hover img {
+    transform: scale(1.1); /* Zoom imaj la pou mouvman dous */
+    opacity: 0.8; /* Sa ap pèmèt ou wè koulè background nan pi byen */
+}
+
+/* --- Style pou Caption (Fade-in) --- */
+.gallery-image figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 51, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    
+    /* Kache l pa defo */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-image:hover figcaption {
+    opacity: 1; /* Parèt dousman lè w hover */
+}
+
+/* --- Media Queries pou Grid la --- */
+@media (min-width: 900px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1200px) {
+    .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+.gallery-image figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.5em;
+    font-size: 0.9em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20%);
+}
+
+.gallery-image:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+@media (max-width: 700px) {
+  .content-row {
+  flex-direction: column;
+  }
+  .content-row video {
+    width: 100%;
+    max-width: 100%;
+    margin: 1em auto;
+  }
+}
+
+
+
+/* --- 8. Media Queries --- */
+
+/* Mobile view */
+@media (max-width: 32.5rem) {
+    body { background-image: none; border: none; box-shadow: none; }
+    #wrapper { width: 100%; }
+    header { background-image: none; }
+
+    /* Navigasyon anpile sou mobil */
+    nav ul { flex-direction: column; }
+
+    /* Tablo Responsive */
+    thead { display: none; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    
+    /* Style pou fòmilè a sou mobil */
+    form { max-width: 100%; }
+}
+
+/* Desktop view */
+@media (min-width: 37.5rem) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav li {
+        border-bottom: none;
+        padding: 0 1rem;
+    }
+    .card-row {
+        flex-direction: row;
+    }
+    .card-row section {
+        flex: 1;
+    }
+}
