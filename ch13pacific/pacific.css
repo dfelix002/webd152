@@ -71,7 +71,7 @@ nav a:visited { color: #344873; }
 nav a:hover { color: #a52a2a; }
 
 /* --- 3. Seksyon Hero (Koreksyon ID Chapit 10 la) --- */
-#homehero, #yurthero, #trailhero, #reservations-hero, fallhero,  {
+#homehero, #yurthero, #trailhero, #reservations-hero, #fallhero  {
     background-repeat: no-repeat;
     background-size: cover;
     height: 18.75rem;
@@ -119,9 +119,9 @@ table th {
     background-color: #f4f4f4;
     text-align: left;
 }
-* SA SE KOREKSYON W TE MANDE A */
+
 tr:hover {
-    background-color: #e0ffe0; /* Koulè vèt pal la lè souri a pase sou li */
+    background-color: #e0ffe0; 
 }
 
 .card-row {
